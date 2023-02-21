@@ -7,33 +7,114 @@
     tools:context=".MainActivity"
     android:orientation="horizontal">
 
-    <TextureView
+    <RelativeLayout
         android:layout_width="800px"
         android:layout_height="800px"
-        android:scaleType="fitXY"
-        android:id="@+id/texture"/>
+        android:scaleType="fitXY">
+
+        <TextureView
+            android:layout_width="800px"
+            android:layout_height="800px"
+            android:scaleType="fitXY"
+            android:id="@+id/texture"/>
+
+        <TextView
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            android:id="@+id/timer"/>
+
+    </RelativeLayout>
+
 
     <RelativeLayout
-        android:layout_width="400px"
+        android:layout_width="480px"
         android:layout_height="800px"
         android:scaleType="fitXY"
         android:id="@+id/ll">
 
-        <ImageView
+        <RelativeLayout
+            android:id="@+id/settingBar"
             android:layout_width="400px"
-            android:layout_height="800px"
+            android:layout_height="700px"
+            android:visibility="invisible"
             android:scaleType="fitXY"
-            android:padding="20px"
-            android:src="@drawable/frame_vertical"/>
+            android:background="@color/cardview_shadow_start_color"
+            android:layout_centerHorizontal="true"
+            android:clickable="false"
+            android:layout_centerVertical="true">
+
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50px"
+                android:text="날짜"
+                android:scaleType="fitXY"
+                android:layout_centerHorizontal="true"/>
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="로고"
+                android:layout_marginTop="150px"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"/>
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="250px"
+                android:layout_centerHorizontal="true"
+                android:text="저장"
+                android:scaleType="fitXY"/>
+        </RelativeLayout>
 
         <ImageView
             android:id="@+id/btnTake"
-            android:layout_width="270px"
-            android:layout_height="190px"
-            android:src="@drawable/button"
+            android:layout_width="350px"
+            android:layout_height="270px"
+            android:src="@drawable/new_button_png"
             android:scaleType="fitXY"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/setting1"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"/>
+        <Button
+            android:id="@+id/setting2"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_marginLeft="380px"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"/>
+        <Button
+            android:id="@+id/setting3"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_marginTop="700px"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"/>
+        <Button
+            android:id="@+id/setting4"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_marginTop="700px"
+            android:layout_marginLeft="380px"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"/>
 
     </RelativeLayout>
 
